@@ -10,14 +10,14 @@ export interface Recipe {
 export class RecipeService {
   constructor(private http: HttpClient) {}
 
-  //TODO: will do this later
+
   getAllRecipes(): Observable<Recipe[]> {
     return this.http.get<Recipe[]>('http://localhost:8080/apiRec/recipes')
   }
 
   //TODO: will make this later
   getRecipe(title: string): Observable<Recipe> {
-    return this.http.get<Recipe>('http://localhost:8080/apiRec/cats/' + title)
+    return this.http.get<Recipe>('http://localhost:8080/apiRec/singleRec/' + title)
   }
 
   insertCat(title: String, ingredients:string ): Observable<Recipe> {
