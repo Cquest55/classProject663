@@ -7,6 +7,8 @@ import {HeaderComponent} from "../header/header/header.component";
 import {FooterComponent} from "../footer/footer/footer.component";
 import { RecipeService } from "../home/recipe/recipe.service";
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from '../form/form/form.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -16,11 +18,13 @@ import { HttpClientModule } from '@angular/common/http';
     RecipeComponent,
     NavbarComponent,
     HeaderComponent,
+    FormComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     RecipeService

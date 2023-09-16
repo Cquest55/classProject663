@@ -24,4 +24,23 @@ export class RecipeComponent implements OnInit{
     );
   }
 
+  deleteRecipe (recipe: Recipe){
+    this.recipeService.deleteRec(recipe.title).subscribe(
+      (response) => {
+        console.log(response);
+        if(response == 200){
+          return;
+        }
+      },
+      (error) => {
+        console.error('API Error:', error);
+      }
+    )
+
+  }
+
+  refresh(): void {
+    window.location.reload();
+  }
+
 }
